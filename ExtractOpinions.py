@@ -2,7 +2,7 @@
 #import ExtractGraph
 from stanfordcorenlp import StanfordCoreNLP
 import json
-#import stanfordnlp
+
 
 class ExtractOpinions:
     # Extracted opinions and corresponding review id is saved in extracted_pairs, where KEY is the opinion and VALUE
@@ -21,7 +21,6 @@ class ExtractOpinions:
         return
 
     def extract_pairs(self, review_id, review_content):
-        # example data, which you will need to remove in your real code.
         pos_list = ['NN', 'NNS', 'JJ', 'JJR', 'JJS']
         ann = json.loads(self.nlp.annotate(review_content.lower()))
 
@@ -77,8 +76,6 @@ class ExtractOpinions:
                     else:
                         self.extracted_opinions[opinion] = [review_id]
 
-
-        #self.extracted_opinions = {'service, good': [1, 2, 5], 'service, excellent': [4, 6]}
         return
 
 
