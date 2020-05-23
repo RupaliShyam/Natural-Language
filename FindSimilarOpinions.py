@@ -18,12 +18,7 @@ class FindSimilarOpinions:
         return self.word2VecObject.similarity(word_1, word_2)
 
     def findSimilarOpinions(self, query_opinion):
-        # example data, which you will need to remove in your real code. Only for demo.
-
-        '''
-        example_similarity = self.get_word_sim("service", "waiter")
-        print("Similarity of 'service' and 'server' is " + str(example_similarity))
-        '''
+ 
         similar_opinions = {}
         query_attribute = query_opinion.split(', ')[0]
         query_value = query_opinion.split(', ')[1]
