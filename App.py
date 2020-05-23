@@ -1,7 +1,7 @@
 import ExtractOpinions
 import FindSimilarOpinions
 
-# Step 1: extract opinions from assign4_reviews.txt
+# Step 1: extract opinions from reviews.txt
 step_1_extract_opinion = ExtractOpinions.ExtractOpinions()
 review_id = 1
 f = open('data//assign4_reviews.txt', 'r')
